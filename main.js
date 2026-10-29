@@ -1,64 +1,96 @@
-const Jogos = [
-  { nome: "Minecraft", 
-    categoria: "Sandbox", 
-    quantidade: 15, 
-    preco: 99.90 },
+const Videogames = [
+  {
+    nome: "Super Nintendo",
+    categoria: "Console Retrô",
+    anoLancamento: 1990,
+    quantidade: 10,
+    preco: 499.90
+  },
 
-  { nome: "EA Sports FC 25", 
-    categoria: "Esportes", 
-    quantidade: 12, 
-    preco: 299.90 },
+  {
+    nome: "Mega Drive",
+    categoria: "Console Retrô",
+    anoLancamento: 1988,
+    quantidade: 8,
+    preco: 399.90
+  },
 
-  { nome: "God of War Ragnarök", 
-    categoria: "Ação e Aventura", 
-    quantidade: 8, preco: 249.90 },
+  {
+    nome: "PlayStation 1",
+    categoria: "Console Clássico",
+    anoLancamento: 1994,
+    quantidade: 12,
+    preco: 349.90
+  },
 
-  { nome: "GTA V", 
-    categoria: "Mundo Aberto", 
-    quantidade: 20, 
-    preco: 149.90 },
+  {
+    nome: "Nintendo 64",
+    categoria: "Console Retrô",
+    anoLancamento: 1996,
+    quantidade: 7,
+    preco: 599.90
+  },
 
-  { nome: "The Last of Us Part II", 
-    categoria: "Ação e Aventura", 
-    quantidade: 10, 
-    preco: 199.90 },
+  {
+    nome: "Atari 2600",
+    categoria: "Console Clássico",
+    anoLancamento: 1977,
+    quantidade: 5,
+    preco: 699.90
+  },
 
-  { nome: "Forza Horizon 5", 
-    categoria: "Corrida", 
-    quantidade: 7, 
-    preco: 229.90 },
+  {
+    nome: "PlayStation 2",
+    categoria: "Console Clássico",
+    anoLancamento: 2000,
+    quantidade: 15,
+    preco: 499.90
+  },
 
-  { nome: "Mortal Kombat 1", 
-    categoria: "Luta", 
-    quantidade: 14, 
-    preco: 179.90 },
+  {
+    nome: "Game Boy Color",
+    categoria: "Console Portátil",
+    anoLancamento: 1998,
+    quantidade: 9,
+    preco: 299.90
+  },
 
-  { nome: "Resident Evil 4", 
-    categoria: "Terror", 
-    quantidade: 9, 
-    preco: 219.90 },
+  {
+    nome: "Nintendo GameCube",
+    categoria: "Console Clássico",
+    anoLancamento: 2001,
+    quantidade: 6,
+    preco: 649.90
+  },
 
-  { nome: "Super Mario Odyssey", 
-    categoria: "Plataforma", 
-    quantidade: 11, 
-    preco: 249.90 },
+  {
+    nome: "Xbox 360",
+    categoria: "Console Clássico",
+    anoLancamento: 2005,
+    quantidade: 11,
+    preco: 599.90
+  },
 
-  { nome: "Red Dead Redemption 2", 
-    categoria: "Aventura", 
-    quantidade: 6, 
-    preco: 199.90 }
+  {
+    nome: "Nintendo Wii",
+    categoria: "Console Clássico",
+    anoLancamento: 2006,
+    quantidade: 13,
+    preco: 399.90
+  }
 ];
 
   const corpoTabela = document.getElementById("corpoTabela")
 
-  for (let Jogo of Jogos){
+  for (let Videogame of Videogames){
     const linha = document.createElement("tr")
 
     linha.innerHTML = `
-        <td>${Jogo.nome}</td>
-        <td>${Jogo.categoria}</td>
-        <td>${Jogo.quantidade}</td>
-        <td class="preco">${Jogo.preco.toLocaleString("pt-BR",{
+        <td>${Videogame.nome}</td>
+        <td>${Videogame.categoria}</td>
+        <td>${Videogame.anoLancamento}</td>
+        <td>${Videogame.quantidade}</td>
+        <td class="preco">${Videogame.preco.toLocaleString("pt-BR",{
             style: "currency",
             currency: "BRL"
         })}</td>
